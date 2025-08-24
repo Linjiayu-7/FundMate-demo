@@ -1,58 +1,64 @@
-# 🚀 FundMate 模拟基金管理平台
+# FundMate - 个人基金助手
 
-[![Vercel](https://vercelbadge.vercel.app/api/LinjiaYu-7/FundMate-demo)](https://fund-mate-demo.vercel.app)
+🌟 一个轻量但专业的基金持仓与收益可视化小工具，支持多用户、交易录入、份额法收益计算、收益趋势分析，并支持 Vercel 一键部署，适合作为前端实习项目展示。
 
-FundMate 是一个模拟基金管理与展示的前端平台，旨在帮助用户进行虚拟基金组合管理与投资模拟。用户可：
-
-- 🔍 查看基金信息（数据可通过接口接入）
-- 📊 搜索 / 筛选基金
-- 📈 使用图表展示收益趋势、分布结构
-- 📱 响应式 UI，适配手机端与 PC 端
-
-> 本项目为前端实训练习，采用现代前端技术栈构建，并已集成 Vercel 一键部署。
+🔗 在线访问：[https://fund-mate-demo.vercel.app](https://fund-mate-demo.vercel.app)
 
 ---
 
-## ✨ 在线预览
+## ✨ 项目功能
 
-👉 [https://fund-mate-demo.vercel.app](https://fund-mate-demo.vercel.app)
+用户可通过 FundMate 实现以下操作：
 
----
-
-## 🧠 技术栈
-
-- [React 18](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)（可选）
-- [Axios](https://axios-http.com/)（请求处理）
-- Git + GitHub + Vercel（CI/CD 自动部署）
+- 🔍 查询基金信息（可搜索、筛选）
+- 🧮 录入申购/赎回记录，自动计算持仓和收益
+- 📈 图表展示收益趋势和分布结构
+- 📊 查看各基金市值、收益率、风险等级等统计指标
+- 💡 响应式 UI，适配桌面与移动端
 
 ---
 
-## 📸 功能截图
+## 🚀 技术栈
 
-| 首页功能卡片 | 添加/编辑基金 |
-| ------------ | ------------- |
-| ![首页](./screenshots/首页.png) | ![新增基金](./screenshots/新增基金.png) |
-
-| 买入基金 | 卖出基金 |
-| -------- | -------- |
-| ![买入](./screenshots/买入基金.png) | ![卖出](./screenshots/卖出基金.png) |
-
-| 统计分析页（图表） |
-| ----------------- |
-| ![统计](./screenshots/统计1.png) ![统计2](./screenshots/统计2.png) |
+| 模块 | 技术 |
+|------|------|
+| 框架 | Vue 3 + Composition API |
+| 状态管理 | Pinia |
+| 构建工具 | Vite |
+| 样式 | Tailwind CSS |
+| 图表 | Chart.js + vue-chartjs |
+| 持久化 | localStorage |
+| 部署 | GitHub + Vercel（CI/CD） |
 
 ---
 
-## 🧪 本地运行
+## 🧩 核心功能说明
+
+### ✅ 多用户支持
+支持一键切换多个用户，便于展示不同持仓组合。
+
+### ✅ 交易录入与份额法收益计算
+记录每笔交易信息，包括申购金额、日期、净值和手续费，自动计算持仓份额与收益。
+
+> **公式说明：**
+> - 持仓份额 = Σ(净投入 ÷ 当时净值)  
+> - 当前市值 = 持仓份额 × 最新净值  
+> - 收益 = 当前市值 − 成本  
+> - 收益率 = 收益 ÷ 成本
+
+### ✅ 图表统计
+- 月度收益趋势图
+- 收益结构柱状图（已实现 vs 未实现）
+- 市值占比环形图
+- 风险等级/涨跌分布图
+
+---
+
+## 🖥️ 本地开发
 
 ```bash
 # 安装依赖
 npm install
 
-# 本地开发
+# 启动开发环境
 npm run dev
-
-# 构建生产环境代码（用于部署）
-npm run build
