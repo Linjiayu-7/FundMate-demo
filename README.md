@@ -25,4 +25,6 @@ FundMate 是一个模拟基金管理和展示的平台，用户可以：
 ```bash
 npm install
 npm run dev
+🌐 在线预览
+👉 点击访问部署地址 https://fund-mate-demo.vercel.app
 
